@@ -56,7 +56,7 @@
 
 Рекомендации:
 
-- Импорты направлены сверху вниз: `shared → entities → features → widgets → pages/app`.
+- Импорты направлены сверху вниз: `shared → entities → shared → widgets → features → pages/app`.
 - Публичный API каждого слайса/модуля экспортируется через `index`-файлы.
 - Избегайте циклических зависимостей между слоями.
 
@@ -108,7 +108,7 @@ Payload управляет схемами данных (коллекциями),
 
 - Гайд по React: [animejs.com/documentation/getting-started/using-with-react](https://animejs.com/documentation/getting-started/using-with-react)
 
-> прмер работы с анимациейы
+> прмер работы с анимацией
 
 ```
 import { animate, createScope, spring, createDraggable } from 'animejs';
