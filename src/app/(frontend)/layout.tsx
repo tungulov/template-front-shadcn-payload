@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto_Flex } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/shared/hooks/theme-provider";
 
 const robotoFlex = Roboto_Flex({
   variable: "--font-roboto-flex",
@@ -19,8 +20,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
-      <body className={`${robotoFlex.variable} antialiased`}>{children}</body>
+    <html lang="ru" suppressHydrationWarning>
+      <body className={`${robotoFlex.variable} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
