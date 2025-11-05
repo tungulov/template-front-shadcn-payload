@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto_Flex } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/shared/hooks/theme-provider";
+import { ThemeMessageListener } from "@/shared/hooks/theme-message-listener";
 
 const robotoFlex = Roboto_Flex({
   variable: "--font-roboto-flex",
@@ -28,6 +29,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ThemeMessageListener />
           {children}
         </ThemeProvider>
       </body>
