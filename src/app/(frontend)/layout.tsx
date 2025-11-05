@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Fira_Sans } from "next/font/google";
+import { Roboto_Flex } from "next/font/google";
 import "./globals.css";
 
-const firaSans = Fira_Sans({
-  variable: "--font-fira-sans",
-  weight: ["400", "500", "600", "700", "100", "200", "300", "800", "900"],
+const robotoFlex = Roboto_Flex({
+  variable: "--font-roboto-flex",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin", "cyrillic"],
 });
 
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${firaSans.variable} antialiased`}>{children}</body>
+      <body className={`${robotoFlex.variable} antialiased`}>{children}</body>
     </html>
   );
 }
