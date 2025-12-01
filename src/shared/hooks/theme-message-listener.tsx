@@ -9,7 +9,7 @@ export function ThemeMessageListener() {
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
       // Проверяем, что это сообщение о смене темы
-      if (event.data.type === "theme-change") {
+      if (event.data?.type === "theme-change") {
         const newTheme = event.data.theme; // "light" или "dark"
         setTheme(newTheme);
       }
