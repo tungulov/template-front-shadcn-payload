@@ -76,21 +76,6 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-
-  /* Gradient colors для лендинга */
-  --gradient-from: oklch(0.67 0.24 252);
-  --gradient-via: oklch(0.62 0.23 295);
-  --gradient-to: oklch(0.72 0.19 345);
-  
-  /* Success/Feature accent */
-  --feature-accent: oklch(0.65 0.21 165);
-  
-  /* Spacing для секций */
-  --section-padding-y: 5rem;
-  --section-padding-y-lg: 8rem;
-  
-  /* Container */
-  --container-max-width: 80rem;
 }
 
 .dark {
@@ -125,11 +110,6 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-
-  --gradient-from: oklch(0.65 0.25 252);
-  --gradient-via: oklch(0.60 0.24 295);
-  --gradient-to: oklch(0.70 0.20 345);
-  --feature-accent: oklch(0.63 0.22 165);
 }
 
 @layer base {
@@ -138,19 +118,5 @@
   }
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-@layer utilities {
-  .text-gradient {
-    @apply bg-gradient-to-r from-[var(--gradient-from)] via-[var(--gradient-via)] to-[var(--gradient-to)] bg-clip-text text-transparent;
-  }
-  
-  .bg-gradient-primary {
-    @apply bg-gradient-to-br from-[var(--gradient-from)]/10 via-[var(--gradient-via)]/10 to-[var(--gradient-to)]/10;
-  }
-  
-  .border-gradient {
-    border-image: linear-gradient(to right, var(--gradient-from), var(--gradient-via), var(--gradient-to)) 1;
   }
 }
